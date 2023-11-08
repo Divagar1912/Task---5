@@ -1,0 +1,182 @@
+1.Create a package named "com.example hr" that includes an Employee class. The Employee class should have the following fields:
+
+name-a string that represents the employee's name.
+
+id-an integer that represents the employee's ID number
+
+salary-a double that represents the employee's salary
+
+a. The Employee class should also have the following methods
+
+b. public void printName()- a method that prints the employee's name to the console.
+
+c. public void printSalary()- a method that prints the employee's salary to the cucuole.
+
+d. Create a second package named "com.example hrtest" that includes a class named "Employee Test". The "Employee Test" class should include a main method that creates an instance of the "Employee" class, sets the employee's name, ID number, and salary, and calls its methods to print the employee's name and salary to the console.
+
+e. In your main method, use the "import" statement to import the "com.example.hr" package and access the "Employee" class
+
+f.Compile and run your program to verify that it successfully creates an instance of the "Employee" class and calls its methods to print the employee's name and salary to the console
+
+
+
+package com.example.hr;
+
+public class Employee {
+
+
+	    private String name;
+	    private int id;
+	    private double salary;
+
+	    public Employee(String name, int id, double salary) {
+	        this.name = name;
+	        this.id = id;
+	        this.salary = salary;
+	    }
+
+	    public void printName() {
+	        System.out.println("Employee Name: " + name);
+	    }
+
+	    public void printSalary() {
+	        System.out.println("Employee Salary: " + salary);
+	    }
+	}
+
+
+package com.example.hrtest;
+import com.example.hr.Employee; // Import the Employee class from the hr package
+
+
+
+
+	public class EmployeeTest {
+	    public static void main(String[] args) {
+	        // Create an instance of the Employee class
+	        Employee obj = new Employee("Divagar", 12345, 25781.35);
+
+	        obj.printName();
+	        obj.printSalary();
+	    }
+	}
+
+	
+	
+	
+Output:
+
+Employee Name: Divagar
+Employee Salary: 25781.35
+
+
+
+2.Write a Java program to create an ArrayList of strings and then remove all the elements from the ArrayList.
+
+
+package task_4;
+import java.util.ArrayList;
+
+public class Array {
+	
+		    public static void main(String[] args) {
+	        ArrayList<String> stringList = new ArrayList<>();
+
+	        stringList.add("Divagar");
+	        stringList.add("Surya");
+	        stringList.add("Deva");
+	        stringList.add("Paari");
+
+	        System.out.println("ArrayList before removal: " + stringList);
+
+	        stringList.clear();
+
+	        System.out.println("ArrayList after removal: " + stringList);
+	    }
+	}
+
+	
+Output:
+
+ArrayList before removal: [Divagar, Surya, Deva, Paari]
+ArrayList after removal: []
+
+
+3.Write a Java program to create a TreeMap of employee IDs and names. Then, print out the names of all the employees in alphabetical order.
+
+package task_4;
+
+import java.util.TreeMap;
+
+
+public class Employee_Details {
+
+	
+
+	    public static void main(String[] args) {
+	        TreeMap<Integer, String> employeeMap = new TreeMap<>();
+
+	        employeeMap.put(1, "Akash");
+	        employeeMap.put(2, "Babu");
+	        employeeMap.put(103, "Chandru");
+	        employeeMap.put(104, "Divagar");
+	        employeeMap.put(105, "Elanjuriyan");
+
+	        System.out.println("Employees in alphabetical order:");
+	        for (String name : employeeMap.values()) {
+	            System.out.println(name);
+	        }
+	    }
+	}
+
+	
+	
+	
+	
+Output:
+
+Employees in alphabetical order:
+Akash
+Babu
+Chandru
+Divagar
+Elanjuriyan
+
+
+4.Write a program to convert List to Array
+
+package task_4;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Array_4 {
+
+	
+	    public static void main(String[] args) {
+	        List<String> stringList = new ArrayList<>();
+	        stringList.add("Ready");
+	        stringList.add("Get");
+	        stringList.add("Set");
+	        stringList.add("Go");
+
+	        String[] stringArray = stringList.toArray(new String[stringList.size()]);
+
+	        System.out.println("Array elements:");
+	        for (String element : stringArray) {
+	            System.out.println(element);
+	        }
+	    }
+	}
+
+Output:
+Array elements:
+Ready
+Get
+Set
+Go
+
+	
+
+
+
+
